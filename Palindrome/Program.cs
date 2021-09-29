@@ -6,7 +6,7 @@ namespace Palindrome
     {
         public delegate bool Validation(string input);
 
-        public static bool GetInput()
+        public static bool GetInput(ref bool exit)
         {
             Console.WriteLine($"Enter your palindrome"); 
             string input = Console.ReadLine();
@@ -29,6 +29,7 @@ namespace Palindrome
                     if (escKey.Key == ConsoleKey.Escape)
                     {
                         invalid = false;
+                        exit = true;
                     }
                     else
                     {
@@ -45,9 +46,10 @@ namespace Palindrome
         {
             bool exit = false;
 
+
             while (!exit)
             {
-                if (!GetInput())
+                if (!GetInput(ref exit))
                 {
                     Console.WriteLine($"Valid palindrome not entered. Please try again later.");
                 }
