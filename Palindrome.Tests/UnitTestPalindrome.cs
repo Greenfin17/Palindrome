@@ -5,12 +5,20 @@ namespace Palindrome.Tests
 {
     public class PalindromeTests
     {
-        [Fact]
-        public void a_santa_at_nasa()
+        [Theory]
+        [InlineData("This is not a palindrome.", false)]
+        [InlineData("A car, a man, a maraca.", true)]
+        [InlineData("Barge in! Relate mere war of 1991 for a were-metal Ernie grab!", true)]
+        [InlineData("Bombard a drab mob.", true)]
+        [InlineData("The rain in Main falls mainly in the plain.", false)]
+        [InlineData("Goldenrod-adorned log", true)]
+        [InlineData("Golf? No sir, prefer prison-flog", true)]
+        [InlineData("Golf? No sire, prefer prison-flog", false)]
+        [InlineData("Margot trades used art to gram.", true)]
+        [InlineData("May a moody baby doom a yam?", true)]
+        public void palindrome_theory_test(string stringToTest, bool expectedResult)
         {
             // Arrange
-            var stringToTest = "A Santa at Nasa";
-            bool expectedResult = true;
             bool actualResult = false;
 
             // Act
