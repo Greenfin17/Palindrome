@@ -14,6 +14,8 @@ namespace Palindrome.Tests
         [InlineData("Goldenrod-adorned log", true)]
         [InlineData("Golf? No sir, prefer prison-flog", true)]
         [InlineData("Golf? No sire, prefer prison-flog", false)]
+        [InlineData("Margot trades used art to gram.", true)]
+        [InlineData("May a moody baby doom a yam?", true)]
         public void palindrome_theory_test(string stringToTest, bool expectedResult)
         {
             // Arrange
