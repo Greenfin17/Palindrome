@@ -10,7 +10,7 @@ namespace Palindrome.Tests
         [InlineData("A car, a man, a maraca.", true)]
         [InlineData("Barge in! Relate mere war of 1991 for a were-metal Ernie grab!", true)]
         [InlineData("Bombard a drab mob.", true)]
-        [InlineData("The rain in Main falls mainly in the plain.", false)]
+        [InlineData("The rain in Maine falls mainly in the plain.", false)]
         [InlineData("Goldenrod-adorned log", true)]
         [InlineData("Golf? No sir, prefer prison-flog", true)]
         [InlineData("Golf? No sire, prefer prison-flog", false)]
