@@ -8,7 +8,7 @@ namespace Palindrome
 {
     public class PalindromeValidator
     {
-        private string removePunctuation(string originalStr)
+        public string RemovePunctuation(string originalStr)
         {
             string returnStr = string.Empty;
             for (int i = 0; i < originalStr.Length; i++)
@@ -25,8 +25,8 @@ namespace Palindrome
         public bool IsPalindrome(string testStr)
         {
             bool returnVal = true;
-            string noPunct = string.Empty;
-            noPunct = removePunctuation(testStr);
+            string noPunct;
+            noPunct = RemovePunctuation(testStr);
             noPunct = noPunct.ToLower();
             for (int i = 0, j = noPunct.Length - 1; i < noPunct.Length && j >= i; i++, j--)
             {

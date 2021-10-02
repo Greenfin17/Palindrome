@@ -29,5 +29,20 @@ namespace Palindrome.Tests
             Assert.Equal(expectedResult, actualResult);
 
         }
+
+        [Theory]
+        [InlineData("A car, a man, a maraca.", "Acaramanamaraca")]
+        [InlineData("Golf? No sir, prefer prison-flog", "GolfNosirpreferprisonflog")]
+        public void punctuation_test(string stringToTest, string expectedResult)
+        {
+            // Arrange
+
+            // Act
+            var palindrome = new PalindromeValidator();
+            var actualResult = palindrome.RemovePunctuation(stringToTest);
+
+            // Assert
+            Assert.Equal(expectedResult, actualResult);
+        }
     }
 }
